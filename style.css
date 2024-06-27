@@ -1,0 +1,539 @@
+body, html {
+    height: 100vh;
+    position: relative;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0;
+    color: white;
+}
+  
+.parallax {
+    background-image: url(images/background.jpg);
+    height: 100vh;
+
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* Header Content Start*/
+
+.header {
+    align-items:center;
+
+    position: absolute;
+    left: 20vw;
+    top: 30vh;
+
+    text-align: left;
+    margin-right: 10vw;
+    font: bold;
+}
+.header .title {
+    font-size: 100px;
+}
+.header .text {
+    font-size: 50px;
+}
+
+/* Header Content End*/
+/* Intro Content Start*/
+
+.intro {
+    display: flex;
+    align-items:center;
+
+    position: absolute;
+    top: 100vh;
+    
+    width: 100vw;
+    height: 60vh;
+
+    background-color: rgba(0, 0, 0, 0.603);
+}
+.intro .description {
+    width: 60%;
+    margin-left: 20%;
+    color: white;
+    font-size: 40px;
+}
+
+
+/* Intro Content End*/
+/* Skills Content Start*/
+
+.skills {
+    display: flex;
+    align-items:center;
+
+    position: absolute;
+    top: 200vh;
+    
+    width: 100vw;
+    height: 60vh;
+
+    background-color: rgba(0, 0, 0, 0.603);
+}
+
+/* SlideShow Content Start*/
+ 
+@keyframes ImageSlider {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-500px * 7))}
+}
+.skills .slider {
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 250;
+	margin: 0;
+	overflow: hidden;
+	position: relative;
+	width: 100%;
+	
+	&::before,
+	&::after {
+		/*@include white-gradient;*/
+		content: "";
+		height: 250px;
+		position: absolute;
+		width: 250px;
+		z-index: 2;
+	}
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	.slide-track {
+		animation: ImageSlider 15s linear infinite;
+		display: flex;
+		width: calc(500px * 14);
+	}
+	.slide {
+		height: 250px;
+		width: 500px;
+	}
+    .slide-track .slide img{
+        height: 250px;
+		width: 250px;
+    }
+}
+
+/* SlideShow Content End*/
+/* Skills Content End*/
+/* Education Content Start*/
+
+.education {
+    display: flex;
+    align-items:center;
+
+    position: absolute;
+    top: 300vh;
+    
+    width: 100vw;
+    height: 60vh;
+
+    background-color: rgba(0, 0, 0, 0.603);
+}
+.education .name {
+    width: 30%;
+    margin-left: 10%;
+    color: white;
+    font-size: 40px;
+
+    text-align: left;
+}
+.education .description {
+    width: 30%;
+    margin-left: 20%;
+    color: white;
+    font-size: 40px;
+
+    text-align: right;
+}
+
+/* Education Content End*/
+/* Experience Content Start*/
+
+.experience {
+    display: flex;
+    align-items:center;
+
+    position: absolute;
+    top: 400vh;
+    
+    width: 100vw;
+    height: 60vh;
+
+    background-color: rgba(0, 0, 0, 0.603);
+}
+.experience .name {
+    width: 30%;
+    margin-left: 10%;
+    color: white;
+    font-size: 40px;
+
+    text-align: left;
+}
+.experience .description {
+    width: 30%;
+    margin-left: 20%;
+    color: white;
+    font-size: 40px;
+
+    text-align: right;
+}
+
+/* Experience Content End*/
+/* Projects Content Start*/
+
+.projects {
+    display: flex;
+    align-items:center;
+
+    position: absolute;
+    top: 500vh;
+    
+    width: 100vw;
+    height: 60vh;
+
+    background-color: rgba(0, 0, 0, 0.603);
+}
+.projects .name {
+    width: 10%;
+    margin-left: 20%;
+    color: white;
+    font-size: 40px;
+}
+.projects .description {
+    width: 20%;
+    margin-left: 5%;
+    color: white;
+    font-size: 40px;
+}
+.projects .context {
+    width: 30%;
+    margin-left: 10%;
+    color: white;
+    font-size: 40px;
+}
+
+/* Projects Content End*/
+/* Contacts Content Start*/
+
+.contacts {
+    display: flex;
+    align-items:center;
+
+    position: absolute;
+    top: 600vh;
+    
+    width: 100vw;
+    height: 20vh;
+
+    background-color: rgb(0, 0, 0);
+}
+.contacts .number {
+    width: 30%;
+    margin-left: 20%;
+    color: white;
+    font-size: 30px;
+}
+.contacts .connections {
+    width: 30%;
+    margin-left: 10%;
+    color: white;
+    font-size: 40px;
+}
+.contacts .connections .image{
+    width: 20%;
+}
+
+/* Contacts Content End*/
+/* Media Queries*/
+
+@media (max-width: 1900px) {
+    .education .name {
+        font-size: 35px;
+    }
+    .education .description {
+        font-size: 35px;
+    }
+    .experience .name {
+        font-size: 35px;
+    }
+    .experience .description {
+        font-size: 35px;
+    }
+    .projects .name {
+        font-size: 35px;
+    }
+    .projects .description {
+        font-size: 35px;
+    }
+    .projects .context {
+        font-size: 35px;
+    }
+    .contacts .number {
+        font-size: 30px;
+    }
+}
+@media (max-width: 1700px) {
+    .education .name {
+        font-size: 30px;
+    }
+    .education .description {
+        font-size: 30px;
+    }
+    .experience .name {
+        font-size: 30px;
+    }
+    .experience .description {
+        font-size: 30px;
+    }
+    .projects .name {
+        font-size: 30px;
+    }
+    .projects .description {
+        font-size: 30px;
+    }
+    .projects .context {
+        font-size: 30px;
+    }
+}
+@media (max-width: 1400px) {
+    .education .name {
+        font-size: 25px;
+    }
+    .education .description {
+        font-size: 25px;
+    }
+    .experience .name {
+        font-size: 25px;
+    }
+    .experience .description {
+        font-size: 25px;
+    }
+    .projects .name {
+        font-size: 25px;
+    }
+    .projects .description {
+        font-size: 25px;
+    }
+    .projects .context {
+        font-size: 25px;
+    }
+    .contacts .number {
+        font-size: 25px;
+    }
+}
+@media (max-width: 1200px) {
+    .contacts .number {
+        font-size: 20px;
+    }
+}
+@media (max-width: 1100px) {
+    .intro .description {
+        font-size: 30px;
+    }
+    .education .name {
+        font-size: 20px;
+    }
+    .education .description {
+        font-size: 20px;
+    }
+    .experience .name {
+        font-size: 20px;
+    }
+    .experience .description {
+        font-size: 20px;
+    }
+    .projects .name {
+        font-size: 20px;
+    }
+    .projects .description {
+        font-size: 20px;
+    }
+    .projects .context {
+        font-size: 20px;
+    }
+
+}
+@media (max-width: 930px) {
+    .header .title {
+        font-size: 90px;
+    }
+    .header .text {
+        font-size: 40px;
+    }
+    .contacts .number {
+        font-size: 15px;
+    }
+}
+@media (max-width: 870px) {
+    .education .name {
+        font-size: 15px;
+    }
+    .education .description {
+        font-size: 15px;
+    }
+    .experience .name {
+        font-size: 15px;
+    }
+    .experience .description {
+        font-size: 15px;
+    }
+    .projects .name {
+        font-size: 15px;
+    }
+    .projects .description {
+        font-size: 15px;
+    }
+    .projects .context {
+        font-size: 15px;
+    }
+
+}
+@media (max-width: 850px) {
+    .header .title {
+        font-size: 80px;
+    }
+    .header .text {
+        font-size: 30px;
+    }
+}
+@media (max-width: 735px) {
+    .header .title {
+        font-size: 70px;
+    }
+}
+@media (max-width: 690px) {
+    .contacts .number {
+        font-size: 10px;
+    }
+}
+@media (max-width: 650px) {
+    .header .title {
+        font-size: 60px;
+    }
+    .education {
+        display: block;
+    }
+    .education .name {
+        width: 40%;
+        margin-left: 30%;
+        margin-top: 15%;
+    }
+    .education .description {
+        width: 40%;
+        margin-left: 30%;
+        margin-top: 20%;
+
+        text-align: left;
+    }
+    .experience {
+        display: block;
+    }
+    .experience .name {
+        width: 40%;
+        margin-left: 30%;
+        margin-top: 15%;
+    }
+    .experience .description {
+        width: 40%;
+        margin-left: 30%;
+        margin-top: 20%;
+
+        text-align: left;
+    }
+}
+@media (max-width: 550px) {
+    .header .title {
+        font-size: 50px;
+    }
+    .header .text {
+        font-size: 20px;
+    }
+    .intro .description {
+        font-size: 20px;
+    }
+}
+@media (max-width: 490px) {
+    .intro {
+        height: 40vh;
+    }
+    .skills {
+        height: 40vh;
+    }
+    .education {
+        height: 40vh;
+    }
+    .education .name {
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 15%;
+    }
+    .education .description {
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 15%;
+
+        text-align: left;
+    }
+    .experience {
+        height: 40vh;
+    }
+    .experience .name {
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 15%;
+    }
+    .experience .description {
+        width: 60%;
+        margin-left: 20%;
+        margin-top: 15%;
+
+        text-align: left;
+    }
+    .projects {
+        height: 40vh;
+    }
+    .contacts {
+        display: block;
+    }
+    .contacts .number {
+        width: 50%;
+        margin-left: 20%;
+        margin-top: 5%;
+    }
+    .contacts .connections {
+        width: 50%;
+        margin-left: 20%;
+        margin-top: 5%;
+    }
+}
+@media (max-width: 460px) {
+    .header .title {
+        font-size: 40px;
+    }
+}
+@media (max-width: 400px) {
+    .intro {
+        height: 50vh;
+    }
+    .skills {
+        height: 50vh;
+    }
+    .education {
+        height: 50vh;
+    }
+    .experience {
+        height: 50vh;
+    }
+    .projects {
+        height: 50vh;
+    }
+}
